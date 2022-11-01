@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <h1>Number 1</h1>
+    <input type="number" placeholder="Nmuber 1" id="inp1" />
+    <h1>Number 2</h1>
+    <input type="number" placeholder="Nmuber 2" id="inp2" />
+    <br>
+    <br>
+    <p id="res"></p>
+    <button id="sum" onclick="sum()">Add</button>
+    <button id="sub" onclick="sub()">Subtract</button>
+    <button id="mul" onclick="mul()">Multiply</button>
+    <button id="div" onclick="div()">Divide</button>
+</body>
+<script>
+    function sum() {
+        var inp1 = parseFloat(document.getElementById('inp1').value);
+        var inp2 = parseFloat(document.getElementById('inp2').value);
+        var res = inp1 + inp2;
+        document.getElementById("res").innerHTML = "Result: " + res;
+    }
+    function sub() {
+        var inp1 = parseFloat(document.getElementById('inp1').value);
+        var inp2 = parseFloat(document.getElementById('inp2').value);
+        var res = inp1 - inp2;
+        document.getElementById("res").innerHTML = "Result: " + res;
+    }
+    function mul() {
+        var inp1 = parseFloat(document.getElementById('inp1').value);
+        var inp2 = parseFloat(document.getElementById('inp2').value);
+        var res = inp1 * inp2;
+        document.getElementById("res").innerHTML = "Result: " + res;
+    }
+    function div() {
+        var inp1 = parseFloat(document.getElementById('inp1').value);
+        var inp2 = parseFloat(document.getElementById('inp2').value);
+        var res = inp1 / inp2;
+        document.getElementById("res").innerHTML = "Result: " + res.toFixed(2);
+    }
+</script>
+
+</html>
