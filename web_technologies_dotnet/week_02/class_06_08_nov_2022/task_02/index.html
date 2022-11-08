@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <style>
+      .redDiv {
+        background-color: red;
+        height: 400px;
+        width: 400px;
+        display: none;
+      }
+    </style>
+    <script>
+      $(document).ready(() => {
+        $("#myDiv").fadeIn(4000, () => {
+          $("#myDiv").css("display", "block");
+          $("#myDiv").fadeOut(4000, () => {
+            $("#msgDiv").append("fadeIn() and fadeOut() completed.");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Demo: jQuery fadeIn() and fadeOut() method</h1>
+
+    <div id="myDiv" class="redDiv"></div>
+
+    <div id="msgDiv"></div>
+  </body>
+</html>
